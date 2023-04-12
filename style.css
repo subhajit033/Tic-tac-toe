@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    /* background-color: rgba(77, 224, 197, 0.539); */
+    color: rgb(0, 0, 0);
+    height: 3rem;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 0 1.5rem; */
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 2.8rem;
+    font-family: 'Tilt Prism', cursive;
+
+}
+
+.gameContainer {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 4rem 0;
+    /* position: relative; */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: sans-serif;
+    /* position: relative; */
+}
+
+
+.box {
+    border: 2px solid black;
+    border-top: none;
+
+    border-left: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+
+}
+
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+    border-bottom: none;
+}
+
+.box:nth-child(3),
+.box:nth-child(6),
+.box:nth-child(9) {
+    border-right: none;
+}
+
+.box:hover {
+    background-color: rgb(228, 170, 228);
+}
+
+.boxtext {
+    font-size: 5vw;
+
+}
+
+
+
+.imgBox img {
+    width: 0;
+    /* height: auto; */
+    transition: 0.6s ease-in-out;
+}
+
+.info-container {
+    margin: 1rem 0;
+}
+
+.info-container>* {
+    margin: 0.5rem 0;
+}
+
+.info {
+    font-size: 1.5rem;
+    color: rgb(222, 28, 147);
+}
+
+#reset {
+    border: none;
+    outline: none;
+    background: none;
+    color: blueviolet;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: 2px solid blueviolet;
+    padding: 6px 15px;
+    border-radius: 8px;
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .gameContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 25vw);
+        grid-template-rows: repeat(3, 25vw);
+    }
+
+    .boxtext {
+        font-size: 12vw;
+    }
+}
